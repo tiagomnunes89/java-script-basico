@@ -1,0 +1,30 @@
+input[type="text"]{
+    width: 400px;
+}
+.papaiBtn{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.destaque {
+    font-weight: bold;
+}
+
+.txtBox {
+    width: 400px;
+}
+
+.btnFalas {
+    padding: 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    margin-top: 15px;
+}
+
+.btnFalas:hover {
+    background-color: red;    
+    cursor: pointer;
+}

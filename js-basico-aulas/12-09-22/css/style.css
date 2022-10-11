@@ -1,0 +1,31 @@
+label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  form {
+    border: 1px solid black;
+    width: 250px;
+    margin: auto;
+    padding: 10px;
+  }
+
+  input[type="button"] {
+    display: block;
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  .errorMsg {
+      color: red;
+      font-size: 10px;
+  }
+
+span {
+    display: block;
+}

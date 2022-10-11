@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisar Texto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body onload="getTextHome()">
+    <p class="destaque">
+        1) Texto informado pelo usuário na página anterior:
+    </p>
+    <p id="txtHome"></p>
+    <br>
+    <br>
+    <label for="gostarias">
+        2) Você gostaria de analisar a informação disponibilizada pelo usuário na página anterior?
+    </label>
+    <select name="simnao" id="gostarias">
+        <option value="sim" selected="selected">
+            Sim
+        </option>
+        <option value="nao">
+            Não
+        </option>
+    </select>
+    <p>OBS: Se você responder não na pergunta anterior (2), por favor informe um novo texto na caixa abaixo:</p>
+    <input type="text" class="txtBox" id="txtInfo"
+        value="Instituto Federal do Triângulo Mineiro Minas Gerais meu preferido">
+    <input type="button" value="Analisar" onclick="analisarTxt()">
+    <hr>
+
+        <label for="qtdPalavras">3) Quantidade de palavras contidas no texto:</label>
+        <span id="txtTotalPal"></span>
+        <br>
+        <br>
+        <label for="txtPalLetraM">4) Palavras iniciadas com a letra M:</label>
+        <p id="txtPalLetraM"></p>
+        <br>
+        <br>
+        <label for="primPalavra">5) Primeira palavra do texto:</label>
+        <p id="primPalavra"></p>
+        <br>
+        <br>
+        <label for="segPalavra">6) Segunda palavra do texto:</label>
+        <p id="segPalavra"></p>
+        <br>
+        <br>
+        <label for="ultimaPalavra">7) Última palavra do texto:</label>
+        <p id="ultimaPalavra"></p>
+        <br>
+        <br>
+        <input type="button" class="papaiBtn" value="Abrir página do papai noel" onclick="window.open('felizNatal.html',' _self')">
+
+</body>
+
+</html>

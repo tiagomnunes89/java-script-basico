@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Validação de Formulário</title>
+  </head>
+  <body>
+    <form>
+      <!-- Nome -->
+
+      <label for="txtNome">Nome:</label>
+      <input type="text" id="txtNome" name="NOME" value="" onkeypress="cleanError()"/>
+      <span id="NOMEERROR" class="errorMsg"></span>
+
+      <!-- Endereço -->
+
+      <label for="txtEndereco">Endereço:</label>
+      <input type="text" id="txtEndereco" name="ENDERECO" value="" onkeypress="cleanError()"/>
+      <span id="ENDERECOERROR" class="errorMsg"></span>
+
+      
+      <!-- Telefone -->
+
+      <label for="txtTelefone">Telefone:</label>
+      <input type="tel" id="txtTelefone" name="TELEFONE" value="" onkeypress="cleanError()"/>
+      <span id="TELEFONEERROR" class="errorMsg"></span>
+
+     <!-- Idade -->
+
+    <label for="txtIdade">Idade:</label>
+    <input type="number" id="txtIdade" name="IDADE" value="" onkeypress="cleanError()" onchange="cleanError()"/>
+    <span id="IDADEERROR" class="errorMsg"></span>
+
+      <!-- Botões -->
+      <input type="button" value="Enviar" onclick="validate()" />
+
+    </form>
+  </body>
+</html>
