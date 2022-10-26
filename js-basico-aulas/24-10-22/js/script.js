@@ -19,26 +19,29 @@ function login() {
     }
 }
 
-function readJSON(usuario, usuario) {
-    //var file = "../json/users.json"
-    var file = "https://wilton-filho.github.io/JS-GitHub/aulas/jogo/login/json/users2.json"
+function readJSON(user, password) {
+    //var file = '../json/users.json'
+    var file = 'https://wilton-filho.github.io/JS-GitHub/aulas/jogo/login/json/users2.json'
+
     fetch(file)
-        .then(response => response.json())
-        .then(content => checkUser(content, usuario, usuario))
-        .catch(err => console.log("erro na leitura do JSON"));
+        .then((response) => response.json())
+        .then((data) => checkUser(data, user, password))
+        .catch(err => {
+            alertWifi("erro na leitura do JSON: " + err, false, 0, "../img/toupeira.gif", 30)
+        })
 }
 
-function checkUser(content, user, password){
+function checkUser(data, user, password) {
     var achou = false
-    for(i=0; i<content.users.length(); i++){
-        if((content.users[i].user == user) && (content.users[i].pwd == password)){
-            achou = true;
-            break;
+    for (i = 0; i < data.usuarios.length; i++) {
+        if ((data.usuarios[i].user == user) && (data.usuarios[i].pwd == password)) {
+            achou = true
+            break
         }
     }
-    if(achou){
-        alertWifi("Login realizado com sucesso! Uhuuuul!", false, 0, "../img/toupeira.gif",30)
+    if (achou) {
+        alertWifi("Login realizado com sucesso! Uhuuuul!", false, 0, "../img/toupeira.gif", 30)
     } else {
-        alertWifi("Usuário inválido, insira um usuário válido", false, 0, "../img/toupeira.gif",30)
-    }          
+        alertWifi("Usuário inválido, insira um usuário válido", false, 0, "../img/toupeira.gif", 30)
+    }
 }
